@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sangeetha Gottala – Computer Science Engineering Student. Portfolio showcasing projects, skills, and achievements." />
+  <meta name="keywords" content="Sangeetha Gottala, CSE Student, Portfolio, Web Developer, Python, Java" />
+  <meta name="author" content="Sangeetha Gottala" />
+  <meta property="og:title" content="Sangeetha Gottala | CSE Student Portfolio" />
+  <meta property="og:description" content="Frontend Developer passionate about building impactful software." />
+  <title>Sangeetha Gottala | CSE Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body> 
+
+  <!-- ═══ SCROLL PROGRESS ═══ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ═══ LOADER ═══ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-code">
+        <span class="loader-line"><span class="kw">const</span> <span class="fn">portfolio</span> = <span class="kw">new</span> <span class="cls">Sangeetha</span>();</span>
+        <span class="loader-line"><span class="fn">portfolio</span>.<span class="method">load</span>();</span>
+      </div>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══ PARTICLES BACKGROUND ═══ -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>SG<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#github-stats" class="nav-link">GitHub</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text" data-aos="fade-right" data-aos-duration="900">
+        <p class="hero-greeting">Hello,I'm👋</p>
+        <h1 class="hero-name">Sangeetha<br /><span class="accent">Gottala</span></h1>
+        <div class="hero-role">
+          <span class="static-text">I'm a&nbsp;</span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="hero-bio">
+          Computer Science Engineering student at Pragati Engineering College, Surampalem —
+          crafting clean code, building full-stack applications, and turning ideas into
+          reality one commit at a time.
+        </p>
+        <div class="hero-cta">
+          <a href="assets/Sangeetha_Gottala_Resume.pdf" class="btn btn-primary" download>
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> contact me
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/sangeetha-g-5860a032b" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/24A31A0576" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:sangeethagottala@gmail.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual" data-aos="fade-left" data-aos-duration="900">
+        <div class="avatar-ring">
+          <div class="avatar-outer">
+            <div class="avatar-inner">
+              <div class="avatar-initials">SG</div>
+            </div>
+          </div>
+          <div class="orbit orbit-1"><div class="planet" style="--color:#a78bfa"><i class="fab fa-python"></i></div></div>
+          <div class="orbit orbit-2"><div class="planet" style="--color:#38bdf8"><i class="fab fa-java"></i></div></div>
+          <div class="orbit orbit-3"><div class="planet" style="--color:#fb923c"><i class="fab fa-react"></i></div></div>
+        </div>
+        <div class="hero-card floating" style="--delay:0s; top:10%; right:-10%">
+          <i class="fas fa-code" style="color:#a78bfa"></i>
+          <span>Clean Code</span>
+        </div>
+        <div class="hero-card floating" style="--delay:.7s; bottom:15%; left:-5%">
+          <i class="fas fa-database" style="color:#38bdf8"></i>
+          <span>Full Stack</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">// 01</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text" data-aos="fade-right">
+          <p class="about-lead">
+            I'm a passionate Computer Science Engineering student with a strong foundation in
+            software development, problem-solving, and modern web technologies.
+          </p>
+          <p>
+            Currently pursuing my B.Tech at <strong>Pragati Engineering College, Surampalem</strong> (affiliated to JNTUK),
+            I channel my curiosity into building applications that solve real-world problems.
+            My journey spans full-stack web development, database management, and core CS concepts.
+          </p>
+          <p>
+            I thrive in collaborative environments and enjoy participating in hackathons, coding
+            competitions, and open-source projects. Outside of tech, I'm an enthusiastic learner
+            who believes in continuous growth and sharing knowledge.
+          </p>
+          <div class="objective-box">
+            <h4><i class="fas fa-bullseye"></i> Career Objective</h4>
+            <p>
+              To leverage my technical skills and academic knowledge in building scalable,
+              user-centric software solutions, contribute to innovative teams, and grow into
+              a full-stack developer who makes a meaningful impact.
+            </p>
+          </div>
+        </div>
+        <div class="about-stats" data-aos="fade-left">
+          <div class="stat-card glass">
+            <div class="stat-number" data-count="3">0</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="strengths">
+            <h4>Personal Strengths</h4>
+            <div class="strength-tags">
+              <span class="tag">Problem Solving</span>
+              <span class="tag">Team Player</span>
+              <span class="tag">Quick Learner</span>
+              <span class="tag">Attention to Detail</span>
+              <span class="tag">Adaptable</span>
+              <span class="tag">Communicator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">// 02</span>
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category glass" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-cat-icon" style="--c:#a78bfa"><i class="fas fa-code"></i></div>
+          <h3>Programming Languages</h3>
+          <div class="skill-bars">
+            <div class="skill-item"><span>Python</span><div class="bar"><div class="bar-fill" data-width="85" style="--color:#a78bfa"></div></div><span class="pct">85%</span></div>
+            <div class="skill-item"><span>SQL</span><div class="bar"><div class="bar-fill" data-width="80" style="--color:#a78bfa"></div></div><span class="pct">80%</span></div>
+            <div class="skill-item"><span>C / C++</span><div class="bar"><div class="bar-fill" data-width="75" style="--color:#a78bfa"></div></div><span class="pct">75%</span></div>
+            <div class="skill-item"><span>JavaScript</span><div class="bar"><div class="bar-fill" data-width="78" style="--color:#a78bfa"></div></div><span class="pct">78%</span></div>
+          </div>
+        </div>
+        <div class="skill-category glass" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-cat-icon" style="--c:#fb923c"><i class="fas fa-tools"></i></div>
+          <h3>Tools & Technologies</h3>
+          <div class="tech-tags">
+            <span class="tech-tag"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="tech-tag"><i class="fab fa-github"></i> GitHub</span>
+            <span class="tech-tag"><i class="fas fa-terminal"></i> VS Code</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass" data-aos="fade-up" data-aos-delay="400">
+          <div class="skill-cat-icon" style="--c:#f472b6"><i class="fas fa-robot"></i></div>
+          <h3>AI / ML Skills</h3>
+          <div class="skill-bars">
+            <div class="skill-item"><span>HTML5</span><div class="bar"><div class="bar-fill" data-width="65" style="--color:#f472b6"></div></div><span class="pct">65%</span></div>
+            <div class="skill-item"><span>CSS3/ Pandas</span><div class="bar"><div class="bar-fill" data-width="72" style="--color:#f472b6"></div></div><span class="pct">72%</span></div>
+            <div class="skill-item"><span>JavaScript</span><div class="bar"><div class="bar-fill" data-width="60" style="--color:#f472b6"></div></div><span class="pct">60%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category glass" data-aos="fade-up" data-aos-delay="500">
+          <div class="skill-cat-icon" style="--c:#fbbf24"><i class="fas fa-layer-group"></i></div>
+          <h3>Core CS Concepts</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">Data Structures</span>
+            <span class="tech-tag">Algorithms</span>
+            <span class="tech-tag">DBMS</span>
+            <span class="tech-tag">OS</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">// 03</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot" style="--c:#a78bfa"></div>
+          <div class="timeline-card glass">
+            <div class="timeline-meta">
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2024 – 2028</span>
+              <span class="timeline-badge current">Current</span>
+            </div>
+            <h3>B.Tech – Computer Science & Engineering</h3>
+            <h4><i class="fas fa-university"></i> Pragati Engineering College, Surampalem</h4>
+            <p>Affiliated to JNTUK | East Godavari, Andhra Pradesh</p>
+            <div class="edu-details">
+              <div class="edu-detail"><i class="fas fa-star"></i> CGPA: 8.63+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot" style="--c:#38bdf8"></div>
+          <div class="timeline-card glass">
+            <div class="timeline-meta">
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2021 – 2023</span>
+              <span class="timeline-badge completed">Completed</span>
+            </div>
+            <h3>Intermediate (MPC)</h3>
+            <h4><i class="fas fa-school"></i> Vikas Junior College</h4>
+            <p>Board of Intermediate Education, Andhra Pradesh</p>
+            <div class="edu-details">
+              <div class="edu-detail"><i class="fas fa-percent"></i> Score: 97%+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot" style="--c:#34d399"></div>
+          <div class="timeline-card glass">
+            <div class="timeline-meta">
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2020– 2021</span>
+              <span class="timeline-badge completed">Completed</span>
+            </div>
+            <h3>Secondary School Certificate (SSC)</h3>
+            <h4><i class="fas fa-school"></i>SLB MPL GIRLS High School</h4>
+            <p>Board of Secondary Education, Andhra Pradesh</p>
+            <div class="edu-details">
+              <div class="edu-detail"><i class="fas fa-percent"></i> GPA: 9.8</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">// 04</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Selected works from GitHub & personal builds</p>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card glass" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-header">
+            <div class="project-icon" style="--c:#a78bfa"><i class="fas fa-heartbeat"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/24A31A0576" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Personal Portfolio Website</h3>
+          <p>Modern responsive portfolio website with premium UI, animations, responsive design, and recruiter-focused layout.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-highlights">
+            <span><i class="fas fa-check-circle"></i> 92% accuracy</span>
+            <span><i class="fas fa-check-circle"></i> 50+ diseases</span>
+          </div>
+        </div>
+
+        <div class="project-card glass featured" data-aos="fade-up" data-aos-delay="100">
+          <div class="featured-badge">Featured</div>
+          <div class="project-header">
+            <div class="project-icon" style="--c:#38bdf8"><i class="fas fa-shopping-cart"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/24A31A0576" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Voice-based-login-system</h3>
+          <p>A secure authentication system that verifies users using voice commands and speech recognition technology.</p>
+          <div class="project-tech">
+            <span>Python</span><span>MYSQL</span>
+          </div>
+          <div class="project-highlights">
+            <span><i class="fas fa-check-circle"></i> JWT Auth</span>
+            <span><i class="fas fa-check-circle"></i> Responsive UI</span>
+            <span><i class="fas fa-check-circle"></i> Admin Panel</span>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-header">
+            <div class="project-icon" style="--c:#34d399"><i class="fas fa-comments"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/24A31A0576" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Blockchain-concept-visualizer</h3>
+          <p>Developed a full-stack web application that visually demonstrates blockchain architecture, block creation, hash generation, and chain validation. The project helps users understand core blockchain concepts through interactive visualizations and real-time demonstrations.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>css</span><span>JavaScript</span>
+          </div>
+          <div class="project-highlights">
+            <span><i class="fas fa-check-circle"></i> Real-time</span>
+            <span><i class="fas fa-check-circle"></i> Multi-room</span>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-header">
+            <div class="project-icon" style="--c:#fb923c"><i class="fas fa-tasks"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/24A31A0576" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+      </div>
+      <div class="center-btn" data-aos="fade-up">
+        <a href="https://github.com/24A31A0576" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="fab fa-github"></i> View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">// 09</span>
+        <h2 class="section-title">Get In Touch</div>
+        <p class="section-sub">Have an opportunity or just want to say hi? My inbox is open!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-item glass">
+            <div class="contact-item-icon" style="--c:#a78bfa"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:sangeethagottala@gmail.com">sangeethagottala@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-item-icon" style="--c:#0a66c2"><i class="fab fa-linkedin-in"></i></div>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/sangeetha-g-5860a032b" target="_blank" rel="noopener">/in/sangeetha-g-5860a032b</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-item-icon" style="--c:#38bdf8"><i class="fab fa-github"></i></div>
+            <div>
+              <h4>GitHub</h4>
+              <a href="https://github.com/24A31A0576" target="_blank" rel="noopener">github.com/24A31A0576</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-item-icon" style="--c:#34d399"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Location</h4>
+              <span>Andhra Pradesh, India</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form glass" id="contactForm" data-aos="fade-left" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder=" " required />
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder=" " required />
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Let's collaborate!" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary w-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>SG<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Computer Science Engineering Student building the future, one line of code at a time.</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/sangeetha-g-5860a032b" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/24A31A0576" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:sangeethagottala@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Projects</h4>
+          <ul>
+            <li><a href="https://github.com/24A31A0576" target="_blank" rel="noopener">Personal Portfolio Website</a></li>
+            <li><a href="https://github.com/24A31A0576" target="_blank" rel="noopener">Voice-based-login-system</a></li>
+            <li><a href="https://github.com/24A31A0576" target="_blank" rel="noopener">Blockchain-concept-visualizer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sangeetha Gottala. Crafted with <i class="fas fa-heart" style="color:#f472b6"></i> and lots of ☕</p>
+        <p>Made with HTML5 · CSS3 · JavaScript</p>
+      </div>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Main JS -->
+  <script src="main.js"></script>
+</body>
+</html>
