@@ -1,6 +1,6 @@
 # 🌟 Sangeetha Gottala — Personal Portfolio Website
 
-A modern, professional, fully responsive portfolio website for **Sangeetha Gottala**, Computer Science Engineering student at Aditya Engineering College, Surampalem.
+A modern, professional, fully responsive portfolio website for **Sangeetha Gottala**, Computer Science Engineering student at Pragati Engineering College, Surampalem.
 
 ---
 
